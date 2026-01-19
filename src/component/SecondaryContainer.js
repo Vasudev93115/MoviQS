@@ -6,11 +6,13 @@ const SecondaryContainer = () => {
   if (!movies?.nowPlayingMovies) return null;
 
   return (
-    <div className="relative z-30 -mt-52 bg-black pt-10">
-      <MovieList
-        title="Now Playing"
-        movies={movies.nowPlayingMovies}
-      />
+    <div className="bg-black">
+      <div className="relative -mt-60 z-20 pt-10">
+      <MovieList title="Now Playing" movies={movies.nowPlayingMovies}/>
+      <MovieList title="Popular Movies" movies={movies.popularMovies}/>
+      <MovieList title="Top Rated Movies" movies={movies.topRatedMovies}/>
+      <MovieList title="Upcoming Movies" movies={movies.upcomingMovies}/>
+      </div>
     </div>
   );
 };

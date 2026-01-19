@@ -37,7 +37,7 @@ const Header = () => {
   }, [dispatch, navigate]);
 
   return (
-    <header className="absolute top-0 left-0 w-full px-8 py-4 flex items-center justify-between z-50 bg-gradient-to-b from-black">
+    <header className="fixed top-0 left-0 w-full px-8 py-4 flex items-center justify-between z-50 bg-gradient-to-b from-black">
       
       {/* LOGO */}
       <img

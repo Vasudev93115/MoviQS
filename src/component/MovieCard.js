@@ -4,11 +4,11 @@ const MovieCard = ({ posterPath }) => {
   if (!posterPath) return null;
 
   return (
-    <div className="w-40 flex-shrink-0">
+    <div className="w-40 flex-shrink-0 transform transition duration-300 hover:scale-110 hover:z-20">
       <img
         src={IMG_CDN + posterPath}
         alt="Movie Card"
-        className="rounded-lg object-cover"
+        className="rounded-lg object-cover hover:brightness-90"
       />
     </div>
   );
