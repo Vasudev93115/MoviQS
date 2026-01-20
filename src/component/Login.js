@@ -82,7 +82,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/e393bb3f-261f-43d1-99bb-16a157885615/web/IN-en-20260105-TRIFECTA-perspective_2802b120-4b8c-44a5-8fb9-617a728f4ec6_large.jpg"
+          src="https://raw.githubusercontent.com/Vasudev93115/netflix-gpt/refs/heads/main/src/utils/assets/background.png"
           alt="Logo"
         />
       </div>
@@ -115,14 +115,14 @@ const Login = () => {
         />
         <p className="text-red-500 font-bold">{errorMessage}</p>
         <button
-          className="p-4 my-6 bg-red-700 w-full rounded-lg"
+          className="p-4 my-6 bg-purple-700 w-full rounded-lg hover:bg-purple-800 font-bold"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign-Up"}
         </button>
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm
-            ? "New to Netflix? Sign Up Now"
+            ? "New here? Create an account"
             : "Already registered? Sign-In Now."}
         </p>
       </form>

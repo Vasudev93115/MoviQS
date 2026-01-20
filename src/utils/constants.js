@@ -1,6 +1,4 @@
-import logo from "./assests/logo.svg";
-
-export const LOGO = logo
+export const LOGO = "https://raw.githubusercontent.com/Vasudev93115/netflix-gpt/db962dac122e416e810c679e1c59cf042caa01ef/src/utils/assets/logo.svg";
 export const USER_AVATAR = "https://net20.cc/img/user-account2.png";
 export const API_OPTIONS = {
   method: 'GET',
