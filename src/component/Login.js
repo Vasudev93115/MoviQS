@@ -82,7 +82,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://raw.githubusercontent.com/Vasudev93115/netflix-gpt/refs/heads/main/src/utils/assets/background.png"
+          src="https://raw.githubusercontent.com/Vasudev93115/netflix-gpt/refs/heads/main/src/utils/assets/background%20(2).png"
           alt="Logo"
         />
       </div>
