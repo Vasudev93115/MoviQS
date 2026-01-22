@@ -1,70 +1,177 @@
-# Getting Started with Create React App
+# 🎬 MoviQs (AI Movie Recommendation Platform)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MoviQs is a modern, responsive, Netflix-inspired movie streaming interface enhanced with **AI-powered movie recommendations**. The application integrates GPT-based natural language understanding with real-time movie data from TMDB, allowing users to discover movies intelligently using simple prompts.
 
-## Available Scripts
+This project demonstrates real-world frontend engineering practices, API integration, authentication, state management, and AI usage.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> https://moviqs-2e707.web.app/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `npm run build`
+* React.js (Functional Components & Hooks)
+* Redux Toolkit (Global State Management)
+* Tailwind CSS (Responsive UI)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend / Services
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Firebase Authentication (Sign In / Sign Up)
+* TMDB API (Movie Data)
+* GPT API (AI Movie Recommendations)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tools
 
-### `npm run eject`
+* JavaScript (ES6+)
+* Git & GitHub
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ✨ Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 🔐 Authentication
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* User Sign In / Sign Up using Firebase
+* Secure session handling
 
-## Learn More
+### 🎥 Movie Browsing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Now Playing Movies
+* Popular Movies
+* Top Rated Movies
+* Upcoming Movies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🤖 AI-Powered Search (GPT)
 
-### Code Splitting
+* Natural language movie search
+* GPT suggests relevant movies
+* Results mapped with TMDB for posters & details
+* Multi-language GPT search support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 📱 UI / UX
 
-### Analyzing the Bundle Size
+* Netflix-style hero section with trailer background
+* Horizontal scrollable movie rows
+* Fully responsive (Mobile, Tablet, Desktop)
+* Clean and modern Tailwind UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧠 How AI Search Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. User enters a natural language query (e.g., *"movies like Inception"*)
+2. GPT returns a clean list of movie names
+3. Movie names are sanitized and searched on TMDB
+4. TMDB results are displayed as movie cards
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📂 Project Structure
 
-### Deployment
+```
+src/
+├── components/
+│   ├── Header.js
+│   ├── Login.js
+│   ├── Browse.js
+│   ├── MainContainer.js
+│   ├── SecondaryContainer.js
+│   ├── MovieList.js
+│   ├── MovieCard.js
+│   ├── GPTSearch.js
+│   ├── GptSearchBar.js
+│   └── GptMovieSuggestion.js
+│
+├── hooks/
+│   ├── useNowPlayingMovies.js
+│   ├── usePopularMovies.js
+│   ├── useTopRatedMovies.js
+│   ├── useUpcomingMovies.js
+│   └── useMovieTrailer.js
+│
+├── utils/
+│   ├── firebase.js
+│   ├── constants.js
+│   ├── validate.js
+│   └── openai.js
+│
+├── redux/
+│   ├── store.js
+│   ├── userSlice.js
+│   ├── movieSlice.js
+│   └── GPTSlice.js
+│
+└── App.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## ⚙️ Environment Variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create a `.env` file in the root directory:
+
+```env
+REACT_APP_TMDB_KEY=your_tmdb_v4_token
+REACT_APP_OPENAI_KEY=your_gpt_api_key
+```
+
+> ⚠️ Never commit `.env` to GitHub. Add it to `.gitignore`.
+
+---
+
+## ▶️ Installation & Setup
+
+```bash
+# Clone repository
+git clone https://github.com/your-username/moviqs.git
+
+# Navigate to project
+cd moviqs
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+---
+
+## 📸 Screenshots
+
+> *(Add screenshots here – Desktop & Mobile views)*
+
+---
+
+## 🧪 Future Enhancements
+
+* Skeleton loaders
+* Debounced GPT search
+* Rate-limiting GPT calls
+* Accessibility improvements (ARIA)
+* Performance optimization (Lighthouse)
+
+---
+
+## 👨‍💻 Author
+
+**Vasudev Giri**
+B.Tech CSE (AI) | Frontend Developer
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub — it motivates continuous improvement!
+
+---
+
+## 📜 License
+
+This project is for educational and portfolio purposes.
