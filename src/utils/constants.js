@@ -4,7 +4,7 @@ export const API_OPTIONS = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMGQ1MTBiNzIyNWViZDE5M2NhYjY5Yzk3MzUwZmQ4YSIsIm5iZiI6MTc2ODcxNzQwMy4xMjQsInN1YiI6IjY5NmM3YzViZmI0YTczYzEzZDhmYzlmZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4K9gbycZrPU2ThAmuK8P8LIPS9OIE8Rfjl9k7NU9d5I'
+    Authorization: 'Bearer '+ process.env.REACT_APP_TMDB_KEY,
   }
 };
 export const IMG_CDN = "https://image.tmdb.org/t/p/w500";
@@ -17,5 +17,5 @@ export const Supported_GPT_Languages = [
   { code: "japanese", label: "Japanese" },
 ];
 
-export const OpenAiApiKey = "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";
+export const OpenAiApiKey = process.env.REACT_APP_OpenAiApiKey;
 export const Ai_Model = "llama-3.1-8b-instant";
